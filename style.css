@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+p{
+    line-height: 1.9rem;
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    line-height: 2rem;
+}
+
+/* nav style */
+
+body{
+    margin: 0;
+}
+.nav{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 50px;
+    box-shadow: 0 0 3px rgba(0, 0 , 0, 0.2);
+    
+    display: flex;
+    /* #29323c, #485563
+     */
+    border: 2px solid #adaaad;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.nav__link{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    color: #9aeb60;
+    -webkit-tap-highlight-color: cyan;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover{
+    background-color:#adaaad;
+}
+
+.na__icon{
+    font-size: 20px;
+}
+
+.active-one{
+    background-color:#adaaad;
+}
+
+/* end of nav style */
+
+/* <!-- welcome section -->*/
+
+#hero{
+    background-image: url(./img/welcome-img.jpeg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c, #485563 100%);
+    opacity: .3;
+    z-index: -1;
+}
+
+.welcome h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    color: white;
+    line-height:3.5rem;
+}
+
+.download-cv{
+    display: block;
+    padding: 12px;
+    padding-left: 30px;
+    border-radius: 10px;
+    color: black;
+    font-size: 3rem;
+    font-weight:bold;
+    font-style: bold;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    width: 50%;
+    margin-left: -5px;
+    margin-top:20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.download-cv:hover{
+    background-color:crimson;
+    color:white;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position : relative;
+    color:transparent;
+    animation: text_revile .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius:9px;
+    background-color : crimson;
+    animation: text_revile_box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero h3{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position : relative;
+    color:transparent;
+    margin-top:10px;
+    animation: text_revile .5s ease forwards;
+    animation-delay: 2s;
+}
+
+
+
+#hero h3 span{
+    position: absolute;
+    top: -7px;
+    left: 0;
+    height: 200%;
+    width: 0%;
+    border-radius:9px;
+    background-color : crimson;
+    animation: text_revile_box 1s ease;
+    animation-delay: 2s;
+}
+
+#hero h2{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position : relative;
+    color:transparent;
+    margin-top:20px;
+    animation: text_revile2 .5s ease forwards;
+    animation-delay: 3s;
+}
+
+
+
+#hero h2 span{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 190%;
+    width: 0%;
+    border-radius:9px;
+    background-color : crimson;
+    animation: text_revile_box 1s ease;
+    animation-delay: 3s;
+}
+
+
+
+/*<!-- end of welcome section --> */
+
+/* keyframe for welcome section */
+
+@keyframes text_revile_box{
+
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+
+}
+
+@keyframes text_revile{
+    100%{
+        color:white;
+    }
+
+}
+
+@keyframes text_revile2{
+    100%{
+        color:crimson;
+    }
+
+}
+
+@keyframes text_revile_name{
+    100%{
+        color:crimson;
+        font-size: 3.5rem;
+    }
+}
+
+/* end of  keyframe welcome section */
+
+/* about me section */
+
+
+.download-cv2{
+    display: block;
+    padding: 10px;
+    padding-left: 17px;
+    border-radius: 10px;
+    color: blue;
+    font-size: 3rem;
+    font-weight:bold;
+    font-style: bold;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size:1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    width: 60%;
+    margin-left: -5px;
+    margin-top:20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.download-cv2:hover{
+    background-color:crimson;
+    color:white;
+}
+
+/* end of about me section */
